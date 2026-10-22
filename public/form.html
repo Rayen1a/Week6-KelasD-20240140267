@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Beans - Buat Caption</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">⚜️ Royal Beans</h1>
+            <div class="nav-links">
+                <a href="index.html">Etalase</a>
+                <a href="form.html" class="active">Buat Caption</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container form-wrapper">
+        <div class="form-card">
+            <h2 class="form-title">Generator Caption Sosial Media</h2>
+            
+            <form id="captionForm">
+                <div class="input-group">
+                    <label for="namaProduk">Nama Produk</label>
+                    <input type="text" id="namaProduk" placeholder="Contoh: Kopi Susu Aren Spesial">
+                    <div id="namaError" class="error-text"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="hargaProduk">Harga Produk (Rp)</label>
+                    <input type="number" id="hargaProduk" placeholder="Contoh: 25000">
+                    <div id="hargaError" class="error-text"></div>
+                </div>
+
+                <div class="input-group">
+                    <label>Pilih Gaya Template</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="template" value="promo" checked> 🎉 Promo</label>
+                        <label><input type="radio" name="template" value="santai"> ☕ Santai</label>
+                        <label><input type="radio" name="template" value="formal"> 🎩 Formal</label>
+                    </div>
+                </div>
+
+                <button type="submit" id="btnSubmit" class="gold-btn">Buat Caption ✨</button>
+            </form>
+
+            <div id="resultBox" class="result-box" style="display: none;">
+                <h3>Hasil Caption:</h3>
+                <p id="captionResult"></p>
+                <button type="button" class="gold-btn outline" id="btnCopy">Salin Caption</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Royal Beans Coffee & Roastery - UMKM Eksklusif</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>

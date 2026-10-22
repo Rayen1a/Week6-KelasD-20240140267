@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Beans - Etalase Produk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Nav Bar Sticky -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">⚜️ Royal Beans</h1>
+            <div class="nav-links">
+                <a href="index.html" class="active">Etalase</a>
+                <a href="form.html">Buat Caption</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h2>Koleksi Eksklusif Kami</h2>
+        <p>Temukan produk-produk pilihan dengan kualitas terbaik dari seluruh dunia.</p>
+    </header>
+
+    <main class="container">
+        <!-- Filter & Search -->
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Cari produk impian Anda...">
+            <select id="categoryFilter">
+                <option value="all">Semua Kategori</option>
+                <!-- Kategori akan diisi via JS -->
+            </select>
+        </div>
+
+        <!-- State Loading / Error -->
+        <div id="loading" class="status-msg">Memuat data istimewa untuk Anda...</div>
+        <div id="error" class="status-msg error-msg" style="display: none;"></div>
+
+        <!-- Katalog Produk -->
+        <div id="productGrid" class="product-grid">
+            <!-- Produk dirender via JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Royal Beans Coffee & Roastery - UMKM Eksklusif</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

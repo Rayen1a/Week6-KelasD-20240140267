@@ -1,0 +1,114 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 20px;
+}
+
+.form-card {
+    background-color: var(--card-dark);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.form-title {
+    color: var(--gold);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+.input-group input[type="text"], 
+.input-group input[type="number"] {
+    width: 100%;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    background-color: var(--bg-dark);
+}
+
+.error-text {
+    color: var(--danger);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    min-height: 1.2rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.radio-group label {
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gold-btn {
+    width: 100%;
+    background-color: var(--gold);
+    color: var(--bg-dark);
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: inherit;
+    margin-top: 1rem;
+}
+
+.gold-btn:hover { background-color: var(--gold-hover); }
+
+.gold-btn:disabled {
+    background-color: #555;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.gold-btn.outline {
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    margin-top: 1rem;
+}
+
+.gold-btn.outline:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.result-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-dark);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+}
+
+.result-box h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#captionResult {
+    white-space: pre-wrap;
+    line-height: 1.8;
+}

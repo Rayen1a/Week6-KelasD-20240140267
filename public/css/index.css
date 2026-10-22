@@ -1,0 +1,192 @@
+:root {
+    --bg-dark: #120e0b;
+    --card-dark: #1e1611;
+    --gold: #d4af37;
+    --gold-hover: #b5952f;
+    --text-light: #fdfbf7;
+    --text-muted: #a89f91;
+    --danger: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar Sticky */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(18, 14, 11, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gold);
+}
+
+/* Container & Hero */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+    min-height: 80vh;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 20px;
+    background: linear-gradient(180deg, var(--card-dark) 0%, var(--bg-dark) 100%);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.hero h2 {
+    color: var(--gold);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Controls (Search & Filter) */
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 0.8rem 1.2rem;
+    background-color: var(--card-dark);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--text-light);
+    border-radius: 4px;
+    font-family: inherit;
+    flex: 1;
+    min-width: 200px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-dark);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: var(--gold);
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    background-color: #fff; /* Krn img dummy rata2 putih */
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-price {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--danger);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.status-msg {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--gold);
+    padding: 2rem;
+}
+.error-msg { color: var(--danger); }
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    color: var(--text-muted);
+}
